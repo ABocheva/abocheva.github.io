@@ -391,7 +391,7 @@ body {
 					padding: 20px;
 					display: inline-block;
 					img {
-					width: 100%;
+					width: auto;
 					height: 200px;
 						@media(min-width: $md) {
 							height: 90px;
