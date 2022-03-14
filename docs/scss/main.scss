@@ -326,83 +326,69 @@ body {
 	&-text {
 		padding: 15px 0;
 	}
-	&-skills {
+	&-list{
+		ul {
+			font-size: rem(18);
+			li {
+				margin: 0 0 15px 0;
+				padding: 0 0 0 25px;
+				position: relative;
+
+				&::before {
+					content: '';
+					color: $color-1;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					background: $color-1;
+					position: absolute;
+					top: 6px;
+					left: 0;
+				}
+			}
+		}
+	}
+	&-priorities {
+		display: flex;
+		flex-direction: column;
+		
 		@media(min-width: $md) {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+		@media(min-width: $lg) {
 			padding: 20px 0;
 		}
-		.skill {
-			background: $color-2;
-			font-weight: $font-medium;
-			border-radius: 10px;
-			margin: 15px 0;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			&-label {
-				background: $color-1;
-				color: $color-white;
-				border-radius: 10px 0 0 10px;
-				padding: 10px;
-				width: 80%;
-				&.__css,
-				&.__sass,
-				&.__bootstrap {
-					width: 65%;
-				}
-				&.__js,
-				&.__jquery {
-					width: 35%;
-				}
-				&.__php {
-					width: 10%;
-				}
-			}
-			&-number {
-				padding: 10px;
-			}
-		}
-	  }
-		&-priorities {
-			display: flex;
-			flex-direction: column;
-			
+		.priority {
+			text-align: center;
+			padding: 0 0 20px 0;
+		
 			@media(min-width: $md) {
-				flex-direction: row;
-				flex-wrap: wrap;
+				padding: 10px;
+				width: 33%;
 			}
 			@media(min-width: $lg) {
-				padding: 20px 0;
+				width: 20%;
 			}
-			.priority {
-				text-align: center;
-				padding: 0 0 20px 0;
-			
-				@media(min-width: $md) {
-					padding: 10px;
-					width: 33%;
-				}
-				@media(min-width: $lg) {
-					width: 20%;
-				}
 
-				&-image {
-					background: $color-2;
-					border-radius: 10px;
-					padding: 20px;
-					display: inline-block;
-					img {
-					width: auto;
-					height: 200px;
-						@media(min-width: $md) {
-							height: 90px;
-						}
+			&-image {
+				background: $color-2;
+				border-radius: 10px;
+				padding: 20px;
+				display: inline-block;
+				img {
+				width: auto;
+				height: 200px;
+					@media(min-width: $md) {
+						height: 90px;
 					}
 				}
-				&-label {
-					padding: 15px 0 0 0;
-				}
+			}
+			&-label {
+				padding: 15px 0 0 0;
 			}
 		}
+	}	
 }
 
 //projectswrap
