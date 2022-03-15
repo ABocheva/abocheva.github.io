@@ -73,7 +73,7 @@ h6 {
     font-size: rem(16);
 }
 p {
-	@media(min-width: 992px){
+	@media(min-width: $md){
 		font-size: 18px;
 	}
 }
